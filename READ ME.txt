@@ -1,0 +1,7 @@
+Corpus_2.0 App
+
+corpus/
+├── READ ME.txt
+├── ...
+└── Run.bat	# Run this to start the app
+

@@ -1,0 +1,63 @@
+{
+  "dataset": "ru",
+  "offline": {
+    "targets": {
+      "en (Legacy)": "Russian (ru)",
+      "bg": "English (en)",
+      "ru": "English (en)"
+    },
+    "do_defs": true,
+    "do_trans": false,
+    "do_tts": false,
+    "scope": "Words + all texts",
+    "start": "1",
+    "end": "",
+    "flagged_only": false,
+    "retry_404": false,
+    "rate": "950",
+    "tr_delay": "0.3",
+    "tts_delay": "0.8",
+    "provider": "Auto",
+    "auto": false,
+    "geometry": "800x820+723+90"
+  },
+  "ui": {
+    "geometry": "1380x840+382+67",
+    "sash": 640,
+    "tab": 0,
+    "targets": {
+      "en (Legacy)": "Russian (ru)",
+      "ru": "English (en)",
+      "bg": "English (en)"
+    },
+    "auto_translate": false,
+    "auto_speak": false,
+    "voice": "Google (online)",
+    "provider": "Google",
+    "search_field": "Word",
+    "search_mode": "Contains",
+    "search": "",
+    "r_min": "",
+    "r_max": "200",
+    "w_from": "",
+    "w_to": "",
+    "f_min": "",
+    "f_max": "",
+    "flag_filter": "All",
+    "sort_col": "rank",
+    "sort_rev": false,
+    "last_rank": {
+      "en (Legacy)": 1034,
+      "ru": 99,
+      "bg": 50000
+    },
+    "packs_geometry": "560x590+878+44",
+    "cov_geometry": "600x640+1212+300",
+    "tx_geometry": "700x520+1013+395",
+    "tx_source": "Russian (ru)",
+    "tx_target": "Bulgarian (bg)",
+    "tx_provider": "Offline",
+    "cov_n": "1000",
+    "def_filter": "All"
+  }
+}

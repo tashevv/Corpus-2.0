@@ -167,11 +167,16 @@ class TranslateWindow:
         t.grid(row=0, column=0, sticky="nsew")
         sb.grid(row=0, column=1, sticky="ns")
         t.bind("<Control-a>", self._select_all)
+        t.bind("<Shift-Return>", self._line_break)
         return frame, t
 
     @staticmethod
     def _select_all(e):
         e.widget.tag_add("sel", "1.0", "end-1c")
+        return "break"
+
+    def _line_break(e):
+        e.widget.insert("insert", "\n")
         return "break"
 
     def _build(self):
@@ -220,7 +225,7 @@ class TranslateWindow:
         frame, self.inp = self._text_box(top, True)
         frame.grid(row=1, column=0, sticky="nsew")
         self.inp.bind("<<Modified>>", self._on_modified)
-        self.inp.bind("<Control-Return>", lambda e: (self.translate(), "break")[1])
+        self.inp.bind("<Return>", lambda e: (self.translate(), "break")[1])
 
         bottom = ttk.Frame(pw)
         bottom.columnconfigure(0, weight=1)
@@ -255,7 +260,7 @@ class TranslateWindow:
         self.bar.grid(row=0, column=3, sticky="ew", padx=(12, 12))
         ttk.Button(f, text="Close", command=self.close).grid(row=0, column=4)
 
-        self.status_var = tk.StringVar(value="Type or paste a text and press Translate (Ctrl+Enter).")
+        self.status_var = tk.StringVar(value="Type or paste a text and press Translate (Enter).")
         ttk.Label(outer, textvariable=self.status_var, style="Muted.TLabel", wraplength=820,
                   justify="left").grid(row=4, column=0, sticky="w", pady=(8, 0))
 
